@@ -1,0 +1,186 @@
+:root {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+
+  margin: 20px;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+.portfolio-header {
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  width: 40%;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.social-media-icons {
+  font-weight: 400;
+  font-size: 16px;
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-header {
+    flex-direction: column;
+    padding-bottom: 0px;
+    width: auto;
+  }
+  .name {
+    width: 100%;
+  }
+  .social-media-icons {
+    margin-top: 16px;
+    width: 100%;
+    flex-direction: column;
+  }
+  .social-media-icons a {
+    padding: 12px 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #ccc;
+    background-color: #1a1a1a;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.linkedin:hover {
+  color: rgb(41, 102, 188);
+}
+
+.instagram:hover {
+  color: #ee7470;
+}
+
+.stackoverflow:hover {
+  color: #7e4b49;
+}
+
+.github:hover {
+  color: #ccc;
+}
+.about-me {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+}
+
+.image {
+  width: 20%;
+  height: auto;
+}
+.hello {
+  width: 80%;
+  height: auto;
+  padding-left: 20px;
+  font-weight: 300;
+}
+.name:hover {
+  cursor: pointer;
+}
+
+.hello-span {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.instagram-link {
+  background-color: #ee7470;
+  color: #fff;
+  cursor: pointer;
+  padding: 0px 2px;
+  font-weight: 500;
+}
+
+.github-link {
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  padding: 0px 2px;
+  font-weight: 500;
+}
+
+.instagram-link:hover {
+  color: #ee7470;
+  background-color: #fff;
+  transition: ease-in-out 0.5s;
+}
+
+.github-link:hover {
+  color: #1a1a1a;
+  background-color: #fff;
+  transition: ease-in-out 0.5s;
+}
+
+.editor {
+  padding: 24px;
+  background: #1a1a1a;
+  box-shadow: 0 20px 68px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  color: white;
+}
+
+.text-container {
+  position: relative;
+  display: inline-block;
+  top: -18px;
+}
+
+.main-name,
+.designation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.designation {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.text-container:hover .designation {
+  transform: translateY(0); /* Move new text into view */
+  opacity: 1;
+}
+
+.text-container:hover .main-name {
+  transform: translateY(100%); /* Move name text to the left */
+  opacity: 0;
+}
